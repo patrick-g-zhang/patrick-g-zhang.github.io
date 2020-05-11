@@ -1,8 +1,5 @@
 ## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/patrick-g-zhang/patrick-g-zhang.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Here are some examples for sylable-level fine-grained prosody control
 
 ### Markdown
 
