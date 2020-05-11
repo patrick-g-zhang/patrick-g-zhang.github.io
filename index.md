@@ -1,6 +1,9 @@
 ## Welcome to GitHub Pages
 Here are some examples for sylable-level fine-grained prosody control
-
+<audio controls>
+  <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+Your browser does not support the audio element.
+</audio>
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
