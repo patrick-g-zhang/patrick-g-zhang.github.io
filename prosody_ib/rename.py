@@ -5,7 +5,7 @@ import os
 import shutil
 
 wav_dir = "/Users/patrickzhang/Documents/generated_200000_/wavs"
-target_dir = "./audio_samples/vq_2_g1"
+target_dir = "./audio_samples/vq_4_g1"
 os.makedirs(target_dir, exist_ok=True)
 
 wav_list = ['LJ001-0027', 'LJ001-0030', 'LJ001-0036', 'LJ001-0089',
