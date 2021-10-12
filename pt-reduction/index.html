@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Audio Examples</title>
+  <title>A Study on the Efficacy of Model Pre-training in Developing Neural Text-to-Speech System</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -12,13 +12,28 @@
 
 </head>
 <body>
+<h1 align="center">
+A Study on the Efficacy of Model Pre-training in Developing Neural Text-to-Speech System
+</h1>
+
+
+<div class="container">
+<h2>Abstract</h2>
+In the development of neural text-to-speech systems, model pre-training with a large amount of non-target speakers' data is a common approach. However, in terms of ultimately achieved system performance for target speaker(s), the actual benefits of model pre-training are uncertain and unstable, depending very much on the quantity and text content of training data. This study aims to understand better why and how model pre-training can positively contribute to TTS system performance. It is postulated that the pre-training process plays a critical role in learning text-related variation in speech, while further training with the target speaker's data aims to capture the speaker-related variation. Different test sets are created with varying degrees of similarity to target speaker data in terms of text content. Experiments show that leveraging a speaker-independent TTS trained on speech data with diverse text content can improve the target speaker TTS on domain-mismatched text. We also attempt to reduce the amount of pre-training data for a new text domain and improve the data and computational efficiency. It is found that the TTS system could achieve comparable performance when the pre-training data is reduced to 1/8 of its original size.
+</div>
 
 <div class="container">
     <h2>Part 1. 24-hour LJSpeech Speech Data as Target Speaker data</h2>
     <i>
-    These examples are randomly sampled from the MOS and CMOS evaluation set for Table 1 in the paper.
+    These examples are randomly sampled from the MOS and CMOS evaluation set for <b> Table 1 </b> in the paper.
     </i>
-  <h3>TTS comparison on test set T-SIM</h3>
+    
+    </br>
+    <b>TTS without pre-training:</b> The system is trained only on 24-hour target speaker data, i.e., without pre-training with other data. </br>
+    <b>TTS with pre-training:</b> The system is built by applying 24-hour target speaker data to fine-tune a speaker-independent model pre-trained with 960-hour LibriSpeech.
+    </br>
+
+  <h3>TTS comparison on Test set T-SIM</h3>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -124,7 +139,7 @@
     </tbody>
   </table>
 
-     <h3>TTS comparison on test set T-DIFF</h3>
+     <h3>TTS comparison on Test set T-DIFF</h3>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -234,7 +249,7 @@
 
 
 
-     <h3>TTS comparison on test set T-RAN</h3>
+     <h3>TTS comparison on Test set T-RAN</h3>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -348,9 +363,16 @@
 
   <h2>Part 2. 1.5-hour LJSpeech Speech Data as Target Speaker data </h2>
     <i>
-    These examples are randomly sampled from the MOS and CMOS evaluation set for Table 3 in the paper.
+    These examples are randomly sampled from the MOS and CMOS evaluation set for <b>Table 3</b> in the paper.
     </i>
-  <h3>TTS comparison on test set T-SIM</h3>
+
+    </br>
+    <b>TTS without pre-training:</b> The system is trained only on 1.5-hour target speaker data, i.e., without pre-training with other data. </br>
+    <b>TTS with pre-training:</b> The system is built by applying 1.5-hour target speaker data to fine-tune a speaker-independent model pre-trained with 960-hour LibriSpeech.
+    </br>
+
+
+  <h3>TTS comparison on Test set T-SIM</h3>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -456,7 +478,7 @@
   </table>
 
 
-    <h3>TTS comparison on test set T-DIFF</h3>
+    <h3>TTS comparison on Test set T-DIFF</h3>
     <table class="table table-hover">
     <thead>
       <tr>
@@ -565,7 +587,7 @@
   </table>
 
 
-   <h3>TTS comparison on test set T-RAN</h3>
+   <h3>TTS comparison on Test set T-RAN</h3>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -676,8 +698,19 @@
 
   <h2>Part 3. Pre-training Data reduction</h2>
     <i>
-    These examples are randomly sampled from the MOS and CMOS evaluation set for Table 4 in the paper.
+    These examples are randomly sampled from the MOS and CMOS evaluation set for <b>Table 4</b> in the paper.
     </i>
+
+    </br>
+    All four target speaker TTS systems are fine-tuned  from  pre-trained speaker-independent TTS models. The only difference between those systems is the pre-training data:
+
+    </br>
+    <b>Random:</b> 40,000 pairs data randomly sampled from the LibriSpeech </br>
+    <b>Full:</b> Full 960-hour LibriSpeech. </br>
+    <b>Prepexity-based:</b> 40,000 pairs data sampled fromLibriSpeech with the method described in subsection 4.1 of the paper </br>
+    <b>Bert-based:</b> 40,000 pair data selected from LibriSpeech using the method described in subsection 4.2 of the paper </br>
+    </br>
+
 
  <h3>TTS comparison on test set from novel books domain</h3>
   <table class="table table-hover">
