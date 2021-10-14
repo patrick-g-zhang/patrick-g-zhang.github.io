@@ -232,6 +232,334 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
     </tbody>
   </table>
 
+
+<h2>Part 2. Ablation Studies </h2>
+<h3>The Effectiveness of Mixed Phoneme and Sup-Phoneme Representations </h3>
+    <i>
+    These examples are randomly sampled from the MOS and CMOS evaluation set for <b> Table 2 </b> in the paper.
+    </i>
+
+  <!-- First sentences -->
+</br>
+ <span>
+                1. As demand is expected to be huge, an expert panel will help screen the proposals for the most promising candidates. 
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table2/pre-p/T000035.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000035.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+    <!-- Second sentences -->
+
+ <span>
+                2. His hosts, on the other hand, wore an uneasy manner that might have been the hallmark of conscious depravity.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table2/pre-p/T000034.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000034.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+    <!-- Third sentences -->
+
+ <span>
+                3. Whether much or little consideration had been directed to the result, Miss Chancellor certainly would not have incurred this reproach.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table2/pre-p/T000033.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000033.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+    <!-- Forth sentences -->
+
+ <span>
+                4. Most of Caxton's own types are of an earlier character, though they also much resemble Flemish or Cologne letter.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table2/pre-p/T000032.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000032.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+
+    <!-- Fifth sentences -->
+
+ <span>
+                5. I have a remedy against thirst, quite contrary to that which is good against the biting of a mad dog.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table2/pre-p/T000025.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000025.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+
+
+<h3>The Effectiveness of Fine-Tuning Strategy </h3>
+    <i>
+    These examples are randomly sampled from the MOS and CMOS evaluation set for <b> Table 3 </b> in the paper.
+    </i>
+
+  <!-- First sentences -->
+</br>
+ <span>
+                1. As demand is expected to be huge, an expert panel will help screen the proposals for the most promising candidates. 
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>only phoneme</th>
+        <th>only sub-phoneme</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table3/only-ph/T000035.wav" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="table3/only-sup/T000035.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000035.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+    <!-- Second sentences -->
+
+ <span>
+                2. His hosts, on the other hand, wore an uneasy manner that might have been the hallmark of conscious depravity.
+  </span>
+   <table class="table table-hover">
+    <thead>
+        <tr>
+        <th>only phoneme</th>
+        <th>only sub-phoneme</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+       <td>
+                <audio src="table3/only-ph/T000034.wav" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="table3/only-sup/T000034.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000034.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+    <!-- Third sentences -->
+
+ <span>
+                3. Whether much or little consideration had been directed to the result, Miss Chancellor certainly would not have incurred this reproach.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>only phoneme</th>
+        <th>only sub-phoneme</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+       <td>
+                <audio src="table3/only-ph/T000033.wav" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="table3/only-sup/T000033.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000033.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+    <!-- Forth sentences -->
+
+ <span>
+                4. Most of Caxton's own types are of an earlier character, though they also much resemble Flemish or Cologne letter.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>only phoneme</th>
+        <th>only sub-phoneme</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+         <td>
+                <audio src="table3/only-ph/T000032.wav" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="table3/only-sup/T000032.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000032.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+
+    <!-- Fifth sentences -->
+
+ <span>
+                5. I have a remedy against thirst, quite contrary to that which is good against the biting of a mad dog.
+  </span>
+   <table class="table table-hover">
+    <thead>
+       <tr>
+        <th>only phoneme</th>
+        <th>only sub-phoneme</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+       <td>
+                <audio src="table3/only-ph/T000025.wav" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="table3/only-sup/T000025.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000025.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+
+
+
+
 </div>
 
 
