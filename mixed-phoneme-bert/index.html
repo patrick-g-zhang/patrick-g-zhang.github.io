@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MIXED-PHONEME BERT: IMPROVING BERT WITH MIXED PHONEME ANDSUP-PHONEME REPRESENTATIONS FOR TEXT TO SPEECH</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel=¨stylesheet¨ type="text/css" href="pib.css">
+  <script src="pib.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<h1 align="center">
+MIXED-PHONEME BERT: IMPROVING BERT WITH MIXED PHONEME ANDSUP-PHONEME REPRESENTATIONS FOR TEXT TO SPEECH
+</h1>
+
+
+<div class="container">
+<h2>Abstract</h2>
+Recently, leveraging BERT pre-training to improve the phoneme encoder in text to speech (TTS) has drawn increasing attention.  However, current works remain several flaws: 1) some works directly apply pre-training with character-based units to enhance phoneme encoder, which causes the inconsistency between pre-training and fine-tuning since TTS encoder takes phoneme as input instead of character-based units; 2) some of them focus on phoneme-level pre-training, which can alleviate the input mismatch but lack the ability to modelling rich representations and sematic information due to limited phoneme vocabulary. In this paper, we propose Mixed-Phoneme BERT, a novel variant of  BERT model that uses mixed phoneme and sup-phoneme representations to enhance the learning capability. Specifically, we merge the adjacent phonemes into sup-phonemes (which have a much larger vocabulary size than that of phonemes), and combine the phoneme sequence and the merged sup-phoneme sequence together as the model input, which can enhance the model capacity to learn rich contextual representations due to increased vocabulary size. Experiment results demonstrate that our proposed Mixed-Phoneme BERT significantly improves the TTS performance with 0.296 CMOS gain compared with the FastSpeech 2 baseline and 0.111 CMOS gain compared with the Phoneme BERT with only phoneme-level pre-training. 
+</div>
+
+<div class="container">
+    <h2>Part 1. Audio Samples</h2>
+    <i>
+    These examples are randomly sampled from the MOS and CMOS evaluation set for <b> Table 1 </b> in the paper.
+    </i>
+
+  <h3> Audio Samples </h3>
+  <span>
+                1. The due relation of letter to pictures and other ornament was thoroughly understood by the old printers.
+  </span>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Recording</th>
+        <th>PWG copy synthesis</th>
+        <th>Fastspeech 2</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table1/gt/LJ001-0178.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table1/pwg/LJ001-0178.wav" controls=""></audio>
+        </td>    
+        <td>
+                <audio src="table1/fs2/T000020.wav" controls=""></audio>
+        </td>    
+      </tr>
+
+    </tbody>
+  </table>
+
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 with unpre-trained Mixed-Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table1/unpre-mp/T000020.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table1/pre-mp/T000020.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+  <!-- second sentence -->
+
+  <span>
+                2. Printing, then, for our purpose, may be considered as the art of making books by means of movable types.
+  </span>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Recording</th>
+        <th>PWG copy synthesis</th>
+        <th>Fastspeech 2</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table1/gt/LJ001-0009.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table1/pwg/LJ001-0009.wav" controls=""></audio>
+        </td>    
+        <td>
+                <audio src="table1/fs2/T000023.wav" controls=""></audio>
+        </td>    
+      </tr>
+
+    </tbody>
+  </table>
+
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 with unpre-trained Mixed-Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table1/unpre-mp/T000023.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table1/pre-mp/T000023.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+<!-- Third sentences -->
+
+ <span>
+                3. Scientific studies have evaluated surgical masks, but relatively few have looked at whether cloth masks can stop virus transmission.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 </th>
+        <th>Fastspeech 2 with unpre-trained Mixed-Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table1/fs2/T000001.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table1/unpre-mp/T000001.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table1/pre-mp/T000001.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+<!-- Third sentences -->
+
+ <span>
+                4. It has carried out three orbital corrections as well as equipment tests and remains in good condition.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 </th>
+        <th>Fastspeech 2 with unpre-trained Mixed-Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table1/fs2/T000036.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table1/unpre-mp/T000036.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table1/pre-mp/T000036.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+
+  <!-- Third sentences -->
+
+ <span>
+                5. The dialogue between Europe and China has strengthened and become more balanced these past few years.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 </th>
+        <th>Fastspeech 2 with unpre-trained Mixed-Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table1/fs2/T000040.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table1/unpre-mp/T000040.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table1/pre-mp/T000040.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
+
+
+</body>
+</html>
+
