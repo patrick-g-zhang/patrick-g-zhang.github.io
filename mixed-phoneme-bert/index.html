@@ -13,8 +13,9 @@
 </head>
 <body>
 <h1 align="center">
-MIXED-PHONEME BERT: IMPROVING BERT WITH MIXED PHONEME ANDSUP-PHONEME REPRESENTATIONS FOR TEXT TO SPEECH
+Mixed-Phoneme BERT: Improving BERT with Mixed Phoneme and Sup-Phoneme Representations for Text to Speech
 </h1>
+
 
 
 <div class="container">
@@ -30,7 +31,7 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
 
   <h3> Audio Samples </h3>
   <span>
-                1. The due relation of letter to pictures and other ornament was thoroughly understood by the old printers.
+        1. The due relation of letter to pictures and other ornament was thoroughly understood by the old printers.
   </span>
   <table class="table table-hover">
     <thead>
@@ -232,22 +233,20 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
     </tbody>
   </table>
 
+<h3> Compared with the PnG BERT </h3>
+ 	<i>
+    	These examples are sampled from the CMOS evaluation set for <b> Table 2 </b> in the paper.
+ 	</i>
 
-<h2>Part 2. Ablation Studies </h2>
-<h3>The Effectiveness of Mixed Phoneme and Sup-Phoneme Representations </h3>
-    <i>
-    These examples are randomly sampled from the MOS and CMOS evaluation set for <b> Table 2 </b> in the paper.
-    </i>
-
-  <!-- First sentences -->
+ 	  <!-- First sentences -->
 </br>
  <span>
-                1. As demand is expected to be huge, an expert panel will help screen the proposals for the most promising candidates. 
+                1. Sometimes the notion of going out to a movie theater seems like a dream from previous life.
   </span>
    <table class="table table-hover">
     <thead>
       <tr>
-        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Png BERT</th>
         <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
       </tr>
     </thead>
@@ -255,11 +254,11 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
 
       <tr>
         <td>
-                <audio src="table2/pre-p/T000035.wav" controls=""></audio>
+                <audio src="table2_new/png/T000008.wav" controls=""></audio>
         </td>
 
         <td>
-                <audio src="table2/pre-mp/T000035.wav" controls=""></audio>
+                <audio src="table2_new/mp/T000008.wav" controls=""></audio>
         </td>       
       </tr>
 
@@ -271,12 +270,12 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
     <!-- Second sentences -->
 
  <span>
-                2. His hosts, on the other hand, wore an uneasy manner that might have been the hallmark of conscious depravity.
+                2. The fire or light, when kept in by the eyelids, equalizes the inward motions, and there is rest accompanied by few dreams.
   </span>
    <table class="table table-hover">
     <thead>
       <tr>
-        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained PnG BERT</th>
         <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
       </tr>
     </thead>
@@ -284,11 +283,11 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
 
       <tr>
         <td>
-                <audio src="table2/pre-p/T000034.wav" controls=""></audio>
+                <audio src="table2_new/png/T000016.wav" controls=""></audio>
         </td>
 
         <td>
-                <audio src="table2/pre-mp/T000034.wav" controls=""></audio>
+                <audio src="table2_new/mp/T000016.wav" controls=""></audio>
         </td>       
       </tr>
 
@@ -298,12 +297,12 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
     <!-- Third sentences -->
 
  <span>
-                3. Whether much or little consideration had been directed to the result, Miss Chancellor certainly would not have incurred this reproach.
+                3. For although the Chinese took impressions from wood blocks engraved in relief for centuries before the wood-cutters of the Netherlands.
   </span>
    <table class="table table-hover">
     <thead>
       <tr>
-        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained PnG BERT</th>
         <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
       </tr>
     </thead>
@@ -311,11 +310,11 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
 
       <tr>
         <td>
-                <audio src="table2/pre-p/T000033.wav" controls=""></audio>
+                <audio src="table2_new/png/T000021.wav" controls=""></audio>
         </td>
 
         <td>
-                <audio src="table2/pre-mp/T000033.wav" controls=""></audio>
+                <audio src="table2_new/mp/T000021.wav" controls=""></audio>
         </td>       
       </tr>
 
@@ -325,12 +324,12 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
     <!-- Forth sentences -->
 
  <span>
-                4. Most of Caxton's own types are of an earlier character, though they also much resemble Flemish or Cologne letter.
+                4. Very much of squalor and discomfort will be endured before the last trinket or the last pretense of pecuniary decency is put away.
   </span>
    <table class="table table-hover">
     <thead>
       <tr>
-        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained PnG BERT</th>
         <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
       </tr>
     </thead>
@@ -338,11 +337,11 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
 
       <tr>
         <td>
-                <audio src="table2/pre-p/T000032.wav" controls=""></audio>
+                <audio src="table2_new/png/T000022.wav" controls=""></audio>
         </td>
 
         <td>
-                <audio src="table2/pre-mp/T000032.wav" controls=""></audio>
+                <audio src="table2_new/mp/T000022.wav" controls=""></audio>
         </td>       
       </tr>
 
@@ -353,7 +352,43 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
     <!-- Fifth sentences -->
 
  <span>
-                5. I have a remedy against thirst, quite contrary to that which is good against the biting of a mad dog.
+                5. Printing, then, for our purpose, may be considered as the art of making books by means of movable types.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 with pre-trained PnG BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table2_new/png/T000023.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2_new/mp/T000023.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+<h2>Part 2. Ablation Studies </h2>
+
+<h3>The Effectiveness of Mixed Phoneme and Sup-Phoneme Representations </h3>
+    <i>
+    These examples are sampled from the CMOS evaluation set for <b> Table 3 </b> in the paper.
+    </i>
+
+  <!-- First sentences -->
+</br>
+ <span>
+                1. In the meantime, renters who have lost their jobs or are sick because of the virus should contact their landlords.
   </span>
    <table class="table table-hover">
     <thead>
@@ -366,11 +401,122 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
 
       <tr>
         <td>
-                <audio src="table2/pre-p/T000025.wav" controls=""></audio>
+                <audio src="table2/pre-p/T000007.wav" controls=""></audio>
         </td>
 
         <td>
-                <audio src="table2/pre-mp/T000025.wav" controls=""></audio>
+                <audio src="table2/pre-mp/T000007.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+    <!-- Second sentences -->
+
+ <span>
+                2. Sometimes the notion of going out to a movie theater seems like a dream from previous life.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table2/pre-p/T000008.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000008.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+    <!-- Third sentences -->
+
+ <span>
+                3. All this comes at a moment when MLB faces a labor crisis that threatens the future of the entire industry.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table2/pre-p/T000012.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000012.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+    <!-- Forth sentences -->
+
+ <span>
+                4. The fire or light, when kept in by the eyelids, equalizes the inward motions, and there is rest accompanied by few dreams.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table2/pre-p/T000016.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000016.wav" controls=""></audio>
+        </td>       
+      </tr>
+
+    </tbody>
+  </table>
+
+
+    <!-- Fifth sentences -->
+
+ <span>
+                5. I told them I knew no remedy but leaving me behind next time, and could have told them that my looks were suitable to my fortune, though not to a feast.
+  </span>
+   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fastspeech 2 with pre-trained Phoneme BERT</th>
+        <th>Fastspeech 2 with pre-trained Mixed-Phoneme BERT</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>
+                <audio src="table2/pre-p/T000017.wav" controls=""></audio>
+        </td>
+
+        <td>
+                <audio src="table2/pre-mp/T000017.wav" controls=""></audio>
         </td>       
       </tr>
 
@@ -383,7 +529,7 @@ Recently, leveraging BERT pre-training to improve the phoneme encoder in text to
 
 <h3>The Effectiveness of Fine-Tuning Strategy </h3>
     <i>
-    These examples are randomly sampled from the MOS and CMOS evaluation set for <b> Table 3 </b> in the paper.
+    These examples are sampled from the CMOS evaluation set for <b> Table 4 </b> in the paper.
     </i>
 
   <!-- First sentences -->
