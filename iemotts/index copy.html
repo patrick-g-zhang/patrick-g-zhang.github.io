@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>iEmoTTS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel=¨stylesheet¨ type="text/css" href="pib.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./emotion_intensity.js"></script>
+
+</head>
+<body>
+
+<h1 align="center">
+iEmoTTS
+</h1>
+
+
+<div class="container">
+<h2>Abstract</h2>
+To be finished
+</div>
+
+<div class="container">
+    <h2>Part 1. Prosody-Timbre Disentanglement</h2>
+    <i>
+    These examples are randomly sampled from the MOS and CMOS evaluation set for <b> Table 1 </b> in the paper.
+    </i>
+    
+    </br>
+    <b>iEmoTTS:</b> </br> 
+    <b>iEmoTTS_WoP:</b> </br> 
+    <b>iEmoTTS_TF:</b> </br> 
+    </br>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Emotion Category</th>
+        <th >Target Speaker</th>
+        <th>iEmoTTS</th>
+        <th>iEmoTTSv1</th>
+        <th>iEmoTTSv2</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <!-- first group -->
+      <tr>
+        <td class="tg-dvpl" rowspan="4" >Amazement</td>
+        <td class="tg-dvpl" rowspan="2"> Male </td>
+
+        <td colspan="3">
+            <span>
+                Text: 一些销售假冒商品竟然欺骗顾客。
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+                <audio src="disentanglement/amazement/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_amazed_240044_TGLF_generated_e2e.wav" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="disentanglement/amazement/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_amazed_240044_TGLF_generated_e2e.wav" controls=""></audio>
+        </td>  
+        
+
+        <td>
+                <audio src="disentanglement/amazement/mix2_gvq_spkadv_105/TGEmotionalchild_amazed_240044_TGLF_generated_e2e.wav" controls=""></audio>
+        </td>  
+
+
+      </tr>
+
+      <tr>
+        <td class="tg-dvpl" rowspan="2"> Female </td>
+
+        <td colspan="3">
+            <span>
+                Text: 这么简单你都不会。
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+          <td>
+                  <audio src="disentanglement/amazement/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_amazed_240471_TGGYY.wav" controls=""></audio>
+          </td>
+
+
+          <td>
+                  <audio src="disentanglement/amazement/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_amazed_240471_TGGYY.wav" controls=""></audio>
+          </td>  
+          
+
+          <td>
+                  <audio src="disentanglement/amazement/mix2_gvq_spkadv_105/TGEmotionalchild_amazed_240471_TGGYY.wav" controls=""></audio>
+          </td>  
+
+
+      </tr>
+
+ <!-- second group -->
+      <tr>
+        <td class="tg-dvpl" rowspan="4" >Angry</td>
+        <td class="tg-dvpl" rowspan="2"> Male </td>
+
+        <td colspan="3">
+            <span>
+                Text: 我今日就为你报仇，将这小子打个半死交到你的手中！
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+                <audio src="disentanglement/angry/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_angry_220028_TGLF.wav" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="disentanglement/angry/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_angry_220028_TGLF.wav" controls=""></audio>
+        </td>  
+        
+
+        <td>
+                <audio src="disentanglement/angry/mix2_gvq_spkadv_105/TGEmotionalchild_angry_220028_TGLF.wav" controls=""></audio>
+        </td>  
+
+
+      </tr>
+
+      <tr>
+        <td class="tg-dvpl" rowspan="2"> Female </td>
+
+        <td colspan="3">
+            <span>
+                Text: 莫名被拘禁，真的让人羞愧恼怒到了极点。
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+          <td>
+                  <audio src="disentanglement/angry/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_angry_220183_TGGYY.wav" controls=""></audio>
+          </td>
+
+
+          <td>
+                  <audio src="disentanglement/angry/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_angry_220183_TGGYY.wav" controls=""></audio>
+          </td>  
+          
+
+          <td>
+                  <audio src="disentanglement/angry/mix2_gvq_spkadv_105/TGEmotionalchild_angry_220183_TGGYY.wav" controls=""></audio>
+          </td>  
+
+
+      </tr>
+
+
+  <!-- third group -->
+      <tr>
+        <td class="tg-dvpl" rowspan="4" >Digust</td>
+        <td class="tg-dvpl" rowspan="2"> Male </td>
+
+        <td colspan="3">
+            <span>
+                Text: 狐狸爸爸平生最讨厌那些无所事事，游手好闲之人了。
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+                <audio src="disentanglement/disgusted/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_disgusted_260024_TGLF.wav" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="disentanglement/disgusted/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_disgusted_260024_TGLF.wav" controls=""></audio>
+        </td>  
+        
+
+        <td>
+                <audio src="disentanglement/disgusted/mix2_gvq_spkadv_105/TGEmotionalchild_disgusted_260024_TGLF.wav" controls=""></audio>
+        </td>  
+
+
+      </tr>
+
+      <tr>
+        <td class="tg-dvpl" rowspan="2"> Female </td>
+
+        <td colspan="3">
+            <span>
+                Text: 紫心公主那种搔首弄姿的女人，我见了就讨厌。
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+          <td>
+                  <audio src="disentanglement/disgusted/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_disgusted_260400_TGGYY.wav" controls=""></audio>
+          </td>
+
+
+          <td>
+                  <audio src="disentanglement/disgusted/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_disgusted_260400_TGGYY.wav" controls=""></audio>
+          </td>  
+          
+
+          <td>
+                  <audio src="disentanglement/disgusted/mix2_gvq_spkadv_105/TGEmotionalchild_disgusted_260400_TGGYY.wav" controls=""></audio>
+          </td>  
+
+
+      </tr>
+
+      
+       <!-- fourth group -->
+      <tr>
+        <td class="tg-dvpl" rowspan="4" >Fear</td>
+        <td class="tg-dvpl" rowspan="2"> Male </td>
+
+        <td colspan="3">
+            <span>
+                Text: 一旦做了亏心事，自然每天心惊肉跳，害怕被人发现。
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+                <audio src="disentanglement/fear/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_fear_210007_TGLF.wav" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="disentanglement/fear/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_fear_210007_TGLF.wav" controls=""></audio>
+        </td>  
+        
+
+        <td>
+                <audio src="disentanglement/fear/mix2_gvq_spkadv_105/TGEmotionalchild_fear_210007_TGLF.wav" controls=""></audio>
+        </td>  
+
+
+      </tr>
+
+      <tr>
+        <td class="tg-dvpl" rowspan="2"> Female </td>
+
+        <td colspan="3">
+            <span>
+                Text: 他妻子去世后，他感到六神无主，十分消极。
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+          <td>
+                  <audio src="disentanglement/fear/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_fear_210421_TGGYY.wav" controls=""></audio>
+          </td>
+
+
+          <td>
+                  <audio src="disentanglement/fear/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_fear_210421_TGGYY.wav" controls=""></audio>
+          </td>  
+          
+
+          <td>
+                  <audio src="disentanglement/fear/mix2_gvq_spkadv_105/TGEmotionalchild_fear_210421_TGGYY.wav" controls=""></audio>
+          </td>  
+
+
+      </tr>
+      
+       
+       <!-- fifth group Happiness-->
+      <tr>
+        <td class="tg-dvpl" rowspan="4" >Happy</td>
+        <td class="tg-dvpl" rowspan="2"> Male </td>
+
+        <td colspan="3">
+            <span>
+                Text: 能和大家在一起我好开心呀！
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+                <audio src="disentanglement/happy/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_happy_250006_TGLF.wav" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="disentanglement/happy/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_happy_250006_TGLF.wav" controls=""></audio>
+        </td>  
+        
+
+        <td>
+                <audio src="disentanglement/happy/mix2_gvq_spkadv_105/TGEmotionalchild_happy_250006_TGLF.wav" controls=""></audio>
+        </td>  
+
+
+      </tr>
+
+      <tr>
+        <td class="tg-dvpl" rowspan="2"> Female </td>
+
+        <td colspan="3">
+            <span>
+                Text: 这又是一个惊喜啊，让人激动。
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+          <td>
+                  <audio src="disentanglement/happy/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_happy_250382_TGGYY.wav" controls=""></audio>
+          </td>
+
+
+          <td>
+                  <audio src="disentanglement/happy/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_happy_250382_TGGYY.wav" controls=""></audio>
+          </td>  
+          
+
+          <td>
+                  <audio src="disentanglement/happy/mix2_gvq_spkadv_105/TGEmotionalchild_happy_250382_TGGYY.wav" controls=""></audio>
+          </td>  
+
+
+      </tr>
+      
+        <!-- sixth group Poor-->
+      <tr>
+        <td class="tg-dvpl" rowspan="4" >Poor</td>
+        <td class="tg-dvpl" rowspan="2"> Male </td>
+
+        <td colspan="3">
+            <span>
+                Text: 如果你放不下那个错的人，那你永远也找不到对的人。
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+                <audio src="disentanglement/poor/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_poor_230013_TGLF.wav" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="disentanglement/poor/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_poor_230013_TGLF.wav" controls=""></audio>
+        </td>  
+        
+
+        <td>
+                <audio src="disentanglement/poor/mix2_gvq_spkadv_105/TGEmotionalchild_poor_230013_TGLF.wav" controls=""></audio>
+        </td>  
+
+
+      </tr>
+
+      <tr>
+        <td class="tg-dvpl" rowspan="2"> Female </td>
+
+        <td colspan="3">
+            <span>
+                Text:之前为我出力办事，现在怎么能反咬一口啊。
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+          <td>
+                  <audio src="disentanglement/poor/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_poor_230259_TGGYY.wav" controls=""></audio>
+          </td>
+
+
+          <td>
+                  <audio src="disentanglement/poor/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_poor_230259_TGGYY.wav" controls=""></audio>
+          </td>  
+          
+
+          <td>
+                  <audio src="disentanglement/poor/mix2_gvq_spkadv_105/TGEmotionalchild_poor_230259_TGGYY.wav" controls=""></audio>
+          </td>  
+
+
+      </tr>
+
+         <!-- seventh group Poor-->
+      <tr>
+        <td class="tg-dvpl" rowspan="4" >Sad</td>
+        <td class="tg-dvpl" rowspan="2"> Male </td>
+
+        <td colspan="3">
+            <span>
+                Text: 小白兔听闻这个消息，内心无比的哀痛。
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+                <audio src="disentanglement/sad/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_sad_230368_TGLF.wav" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="disentanglement/sad/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_sad_230368_TGLF.wav" controls=""></audio>
+        </td>  
+        
+
+        <td>
+                <audio src="disentanglement/sad/mix2_gvq_spkadv_105/TGEmotionalchild_sad_230368_TGLF.wav" controls=""></audio>
+        </td>  
+
+
+      </tr>
+
+      <tr>
+        <td class="tg-dvpl" rowspan="2"> Female </td>
+
+        <td colspan="3">
+            <span>
+                Text:我有你这样的儿子，也够悲哀的！
+            </span>
+        </td>
+      </tr>
+
+      <tr>
+          <td>
+                  <audio src="disentanglement/sad/mix2_gvq_spkadv_105_pspk/TGEmotionalchild_sad_230305_TGGYY.wav" controls=""></audio>
+          </td>
+
+
+          <td>
+                  <audio src="disentanglement/sad/mix2_gvq_spkadv_105_pspk_nopros/TGEmotionalchild_sad_230305_TGGYY.wav" controls=""></audio>
+          </td>  
+          
+
+          <td>
+                  <audio src="disentanglement/sad/mix2_gvq_spkadv_105/TGEmotionalchild_sad_230305_TGGYY.wav" controls=""></audio>
+          </td>  
+
+
+      </tr>
+
+
+      
+    </tbody>
+
+    <!-- emotion intensity -->
+  </table>
+
+
+    <h2>Part 2. Emotion Intensity Control</h2>
+
+
+  <h3>Source speaker emotion intensity control</h3>
+
+  <table class="table table-hover", id="source_emotion_intensity">
+    <thead>
+      <tr>
+        <th>Emotion Category</th>
+        <th>System</th>
+        <th >Low</th>
+        <th>Moderate</th>
+        <th>High</th>
+      </tr>
+    </thead>
+    <tbody>
+            <!-- first group -->
+      <tr id="source_emotion_intensity_text">
+        <td class="tg-dvpl" rowspan="3" > </td>
+        
+        <td colspan="6", class="text-center">
+            <span>
+            </span>
+        </td>
+      </tr>
+
+      <tr id="source_emotion_intensity_url">
+        <td class="tg-dvpl" rowspan="1"> </td>
+        <td>
+                <audio src="dsadsa" controls=""></audio>
+        </td>
+
+
+        <td>
+                <audio src="" controls=""></audio>
+        </td>  
+        
+
+        <td>
+                <audio src="" controls=""></audio>
+        </td>  
+      </tr>
+      
+    </tbody>
+  </table>
+
+ <h3>Target Speaker Emotion Intensity Control</h3>
+
+<table class="table table-hover", id="target_emotion_intensity">
+    <thead>
+      <tr>
+        <th>Emotion Category</th>
+        <th>System</th>
+        <th >Low</th>
+        <th>Moderate</th>
+        <th>High</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+
+
+</div>
+
+
+</body>
+</html>
+
