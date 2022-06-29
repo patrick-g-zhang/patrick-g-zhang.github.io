@@ -24,23 +24,23 @@
 <body>
 
 <h1 align="center">
-iEmoTTS
+iEmoTTS: Toward Robust Cross-Speaker Emotion Transfer and Control for Speech Synthesis based on Disentanglement between Prosody and Timbre
 </h1>
 
 
 <div class="container">
 <h2>Abstract</h2>
-To be finished
+The capability of generating speech with specific type of emotion is desired for many applications of human-computer interaction. Cross-speaker emotion transfer is a common approach to generating emotional speech when speech with emotion labels from target speakers is not available for model training. This paper presents a novel cross-speaker emotion transfer system, named iEmoTTS. The system is composed of an emotion encoder, a prosody predictor, and a timbre encoder. The emotion encoder extracts the identity of emotion type as well as the respective emotion intensity from the mel-spectrogram of input speech. The emotion intensity is measured by the posterior probability that the input utterance carries that emotion. The prosody predictor is used to provide prosodic features for emotion transfer. The timber encoder provides timbre-related information for the system. Unlike many other studies which focus on disentangling speaker and style factors of speech, the iEmoTTS is designed to achieve cross-speaker emotion transfer via disentanglement between prosody and timbre. Prosody is considered as the main carrier of emotion-related speech characteristics and timbre accounts for the essential characteristics for speaker identification. Zero-shot emotion transfer, meaning that speech of target speakers are not seen in model training, is also realized with iEmoTTS. Extensive experiments of subjective evaluation have been carried out. The results demonstrate the effectiveness of iEmoTTS as compared with other recently proposed systems of cross-speaker emotion transfer. It is shown that iEmoTTS can produce speech with designated emotion type and controllable emotion intensity. With appropriate information bottleneck capacity, iEmoTTS is able to effectively transfer emotion information to a new speaker. Audio samples are publicly available\footnote{https://patrick-g-zhang.github.io/iemotts/}.
 </div>
 
 <div class="container">
-    <h2>Part 0. Audio Samples</h2>
+    <h2>Audio Samples</h2>
           1. Some real recordings are presented in this part. </br>
-          2. The utterance of "sad" emotion is from Multi-S60-E3, while the utterances of other emotions are from Child-S1-E6.</br>
-          3. One target speaker from VA-S2 to show the cross-speaker emotion transfer </br>
-          4. One target speaker from Read-S40 to show the zero-shot cross-speaker emotion transfer. </br>
+          2. The utterance of "sad" emotion is from corpus <b>Multi-S60-E3</b>, while the utterances of other emotions are from corpus <b>Child-S1-E6</b>.</br>
+          3. One target speaker from corpus <b>VA-S2</b>. </br>
+          4. One target speaker from corpus <b>Read-S40</b>. </br>
 
-      <h3>Part 0.0. Audio Samples of Source Speakers</h2>
+      <h3>Audio Samples of Different Emotion Types</h2>
         <table class="table table-hover" > 
           <thead>
             <tr>
@@ -83,16 +83,8 @@ To be finished
 
         </table>
 
-        <h3>Part 0.1. Audio Samples of Source Speakers from VA-S2 (Seen, )</h2>
+        <h3>Audio Samples of one Target Speakers from <b>VA-S2</b></h2>
                     <table class="table table-hover" > 
-<!--           <thead>
-            <tr>
-              <th>Fear</th>
-              <th>Happiness</th>
-              <th>Poorness</th>
-            </tr>
-          </thead>
-          <tbody> -->
 
             <tr>
               <td> <audio src="./samples/TGLF/TGLF_ch_001035.wav" controls=""></audio> </td>
@@ -105,16 +97,8 @@ To be finished
         </table>
 
 
-        <h3>Part 0.2. Audio Samples of Target Speaker from Read-S40 (Unseen, )</h2>
+        <h3>Audio Samples of one Target Speaker from <b>Read-S40</b></h2>
            <table class="table table-hover" > 
-<!--           <thead>
-            <tr>
-              <th>Fear</th>
-              <th>Happiness</th>
-              <th>Poorness</th>
-            </tr>
-          </thead>
-          <tbody> -->
 
             <tr>
               <td> <audio src="./samples/TGE0146F/TGE0146F_neutral_025.wav" controls=""></audio> </td>
@@ -130,24 +114,18 @@ To be finished
 
 
 
-    <h2>Part 1. Compare with other systems</h2>
+    <h2>Performance Evaluation</h2>
     <i>
-    These examples are sampled from the MOS and CMOS evaluation set for <b> Table III </b> in the paper.
+    These examples are sampled from the subjective evaluation set for <b> Table II </b> in the paper.
     </i>
-    
-<!--     </br>
-    <b>iEmoTTS:</b> </br> 
-    <b>Trans_CLN:</b> </br> 
-    <b>Trans_Pros</b> </br> 
-    </br>
- -->
+
   <table class="table table-hover" id="cmp_other_table" > 
     <thead>
       <tr>
-        <th>Emotion Category</th>
+        <th>Emotion</th>
         <th>iEmoTTS</th>
-        <th>Trans_CLN</th>
-        <th>Trans_Pros</th>
+        <th>Trans-CLN</th>
+        <th>Trans-Pros</th>
       </tr>
     </thead>
     <tbody>
@@ -168,22 +146,15 @@ To be finished
   </table>
 
 
-    <h2>Part 2. Prosody-Timbre Disentanglement</h2>
+    <h2>Effectiveness of Disentanglement</h2>
     <i>
-    These examples are randomly sampled from the MOS and CMOS evaluation set for <b> Table IV </b> in the paper.
+      These examples are sampled from the subjective evaluation set for <b> Table III </b> in the paper.
     </i>
-    
-    </br>
-    <b>iEmoTTS:</b> </br> 
-    <b>iEmoTTS-NP:</b> </br> 
-    <b>iEmoTTS-SE:</b> </br> 
-    <b>iEmoTTS-SENP:</b> </br> 
-    </br>
 
   <table class="table table-hover" id="disentanglement_table" > 
     <thead>
       <tr>
-        <th>Emotion Category</th>
+        <th>Emotion</th>
         <!-- <th >Target Speaker</th> -->
         <th>iEmoTTS</th>
         <th>iEmoTTS-NP</th>
@@ -223,15 +194,16 @@ To be finished
 
     <!-- emotion intensity -->
 
-    <h2>Part 3. Emotion Intensity Control</h2>
-
-
-  <h3>Source speaker emotion intensity control</h3>
+    <h2>Emotion Intensity Control</h2>
+    <i>
+    These examples are sampled from the subjective evaluation set for <b> Table IV </b> in the paper.
+    <i>
+  <h3>Source Speaker</h3>
 
   <table class="table table-hover", id="source_emotion_intensity">
     <thead>
       <tr>
-        <th>Emotion Category</th>
+        <th>Emotion</th>
         <th>System</th>
         <th >Low</th>
         <th>Moderate</th>
@@ -269,12 +241,12 @@ To be finished
     </tbody>
   </table>
 
- <h3>Target Speaker Emotion Intensity Control</h3>
+ <h3>Target Speaker</h3>
 
 <table class="table table-hover", id="target_emotion_intensity">
     <thead>
       <tr>
-        <th>Emotion Category</th>
+        <th>Emotion</th>
         <th>System</th>
         <th >Low</th>
         <th>Moderate</th>
@@ -288,21 +260,14 @@ To be finished
 
 
 
-    <h2>Part 4. Zeroshot Cross-speaker Zero Shot</h2>
+    <h2>Zero-shot Cross-speaker Emotion Transfer</h2>
     <i>
-        waitting for finish
+      These examples are sampled from the subjective evaluation set for <b> Table V </b> in the paper.
     </i>
     
-    </br>
-    <b>IB-full:</b> </br> 
-    <b>IB-large:</b> </br> 
-    <b>IB-default:</b> </br> 
-    <b>IB-small:</b> </br> 
-    </br>
-
   <table class="table table-hover" id="zero_shot_table" > 
     <thead>
-      <tr> <th>Emotion Category</th> <th>IB-full</th> <th>IB-large</th> <th>IB-default</th> <th>IB-small</th> </tr>
+      <tr> <th>Emotion</th> <th>IB-full</th> <th>IB-large</th> <th>IB-default</th> <th>IB-small</th> </tr>
     </thead>
     <tbody>
       <tr id="zero_shot_table_row1">
@@ -322,20 +287,14 @@ To be finished
 
 
 
-    <h2>Part 5. Effectiveness of Emotion Encoder</h2>
+    <h2>Effectiveness of Emotion Encoder</h2>
     <i>
-        waitting for finish
+      These examples are sampled from the subjective evaluation set for <b> Table VI </b> in the paper.
     </i>
-    
-    </br>
-    <b>iEmoTTS:</b> </br> 
-    <b>iEMOTTS-SER:</b> </br> 
-    <b>iEMOTTS-WoEI:</b> </br> 
-    </br>
 
   <table class="table table-hover" id="emotion_enc_table" > 
     <thead>
-      <tr> <th>Emotion Category</th> <th>iEmoTTS</th> <th>iEMOTTS-SER</th> <th>iEMOTTS-WoEI</th> </tr>
+      <tr> <th>Emotion</th> <th>iEmoTTS</th> <th>iEMOTTS-SER</th> <th>iEMOTTS-WoEI</th> </tr>
     </thead>
     <tbody>
       <tr id="emotion_enc_table_row1">
@@ -353,20 +312,15 @@ To be finished
   </table>
 
 
-     <h2>Part 6. Effectiveness of Semi-Supervised</h2>
-    <i>
-        waitting for finish
+     <h2>Effectiveness of Semi-Supervised</h2>
+     <i>
+      These examples are sampled from the subjective evaluation set for <b> Table VII </b> in the paper.
     </i>
     
-    </br>
-    <b>iEmoTTS:</b> </br> 
-    <b>iEMOTTS-NEU:</b> </br> 
-    <b>iEMOTTS-NEU2:</b> </br> 
-    </br>
 
   <table class="table table-hover" id="semi_sup_table" > 
     <thead>
-      <tr> <th>Emotion Category</th> <th>iEmoTTS</th> <th>iEMOTTS-NEU</th> <th>iEMOTTS-NEU2</th> </tr>
+      <tr> <th>Emotion </th> <th>iEmoTTS</th> <th>iEMOTTS-NEU</th> <th>iEMOTTS-NEU2</th> </tr>
     </thead>
     <tbody>
       <tr id="semi_sup_table_row1">
