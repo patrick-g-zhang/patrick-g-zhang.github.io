@@ -100,7 +100,7 @@ $(document).ready(function () {
          file_name: "proposed",
       },
       {
-         sys_name: "iEMOTTS-SM",
+         sys_name: "iEMOTTS-S",
          file_name: "sm"
       },
    ];
