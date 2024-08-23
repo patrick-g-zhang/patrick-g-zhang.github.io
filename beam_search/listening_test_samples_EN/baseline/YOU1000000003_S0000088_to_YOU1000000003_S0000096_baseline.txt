@@ -1,0 +1,1 @@
+then the sum is largest when those middle pixels are bright but the surrounding pixels are darker.

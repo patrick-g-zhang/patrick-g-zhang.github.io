@@ -1,0 +1,1 @@
+that way, going from the third layer to the last one, just requires learning which combination of sub-components corresponds to which digits.
